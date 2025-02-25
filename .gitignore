@@ -1,2 +1,16 @@
-.vscode/
-sidecar-terminator
+# Dependency directories (remove the comment below to include it)
+vendor
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool
+*.txt
+*.out
+!NOTES.txt
+
+# Binaries for programs and plugins
+./sidecar-terminator
+
+# env
+.env
