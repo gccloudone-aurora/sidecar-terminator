@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  sidecar-terminator:
+  - apiVersion: v2
+    appVersion: 2.0.2
+    created: "2025-02-26T02:21:38.695567349Z"
+    description: A Helm chart for the Sidecar Terminator.
+    digest: 548adf361275e500cea685e7d9453878a4f283d1783a0a95ecb4b6805a517e50
+    name: sidecar-terminator
+    type: application
+    urls:
+    - https://github.com/gccloudone-aurora/sidecar-terminator/releases/download/sidecar-terminator-0.0.1/sidecar-terminator-0.0.1.tgz
+    version: 0.0.1
+generated: "2025-02-26T02:21:38.69557288Z"
