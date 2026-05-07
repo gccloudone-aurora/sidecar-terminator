@@ -30,9 +30,15 @@ spec:
       {{- if .Values.priorityClassName }}
       priorityClassName: {{ .Values.priorityClassName }}
       {{- end }}
+      # --- ADDED POD SECURITY CONTEXT ---
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
       - image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
         name: sidecar-terminator
+        # --- ADDED CONTAINER SECURITY CONTEXT ---
+        securityContext:
+          {{- toYaml .Values.securityContext | nindent 10 }}
         args:
           - '--lock-namespace'
           - {{ .Release.Namespace }}
